@@ -1,0 +1,13 @@
+.container {
+  margin-top: 25px;
+  width: 250px;
+  height: 60px;
+  // background-color: #fff;
+  color: var(--color-main);
+  display: flex;
+  justify-content: space-around;
+}
+
+.note {
+  cursor: pointer;
+}
