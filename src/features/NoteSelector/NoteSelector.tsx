@@ -5,7 +5,7 @@ import styles from './NoteSelector.module.scss';
 import { useAppSelector, useAppDispatch } from 'app/hooks';
 
 export const NoteSelector: FC = () => {
-  const selectedNote = useAppSelector((state) => state.notes.value);
+  const selectedNote = useAppSelector((state) => state.noteFilter.value);
 
   return (
     <div className={styles.container}>

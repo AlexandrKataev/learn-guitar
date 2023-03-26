@@ -1,15 +1,23 @@
 import { useAppDispatch } from 'app/hooks';
-import { enable, noteValue } from 'features/NoteSelector/model/NoteSelectorSlice';
+import { noteValue, setNote } from 'features/NoteSelector/model/NoteSelectorSlice';
 import React, { FC } from 'react';
 import styles from './NotesList.module.scss';
 
-const NotesListArray: noteValue[] = ['All', 'A', 'B', 'C', 'D', 'E', 'F', 'G'];
+const NotesListArray: noteValue[] = [
+  noteValue.A,
+  noteValue.B,
+  noteValue.C,
+  noteValue.D,
+  noteValue.E,
+  noteValue.F,
+  noteValue.G,
+];
 
 export const NotesList: FC = () => {
   const dispatch = useAppDispatch();
 
   const onClickNote = (note: noteValue) => {
-    dispatch(enable(note));
+    dispatch(setNote(note));
   };
 
   return (

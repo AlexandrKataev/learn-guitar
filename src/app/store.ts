@@ -1,9 +1,10 @@
-import notes from 'features/NoteSelector/model/NoteSelectorSlice';
 import { configureStore } from '@reduxjs/toolkit';
+
+import noteFilter from 'features/NoteSelector/model/NoteSelectorSlice';
 
 export const store = configureStore({
   reducer: {
-    notes,
+    noteFilter,
   },
 });
 
